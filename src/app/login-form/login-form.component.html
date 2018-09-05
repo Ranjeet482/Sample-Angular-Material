@@ -1,0 +1,59 @@
+
+<div class="container">
+  <div class="">
+    <div class="col-xs-12 text-center">
+      <img src="https://www.spinnaker.io/assets/images/netflix_logo.jpg" height="150" width="300">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      
+      <div class="formwidth"  [hidden]="submitted">
+    <h2 class="text-center form-group">Login</h2>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <div class="form-group">
+        <mat-form-field appearance="outline" class="width100p">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="username" type="text" class="form-control" id="username"
+                required [(ngModel)]="user.username" name="username" #username="ngModel">
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field appearance="outline" class="width100p">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="password" type="text" class="form-control" id="password"
+                required [(ngModel)]="user.password" name="password" #password="ngModel">
+        </mat-form-field>
+        
+      </div>
+ 
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="!myForm.form.valid" >Submit</button>
+      </div>
+
+    </form>
+
+    <div class="form-group text-center"><b>OR</b></div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-danger btn-block">Login With Google</button>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-success btn-block">Login With Phone</button>
+    </div>
+    <div class="text-center">
+      <button type="button" class="btn btn-link text-info">Sign In Later</button>
+    </div>
+     <div class="text-center">
+      <span>Don't have an account yet?</span><button type="button" class="btn btn-link text-info"><b>Create Account</b></button>
+    </div>
+
+  </div>
+
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <img width="100%" src="https://images.unsplash.com/photo-1530104091755-015d31dfa0b9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=514d46b66a3c5faafe481bb2d1121ac6&auto=format&fit=crop&w=1511&q=80" style="height: 100%;">
+    </div>
+  </div>
+  
+ 
+</div>
